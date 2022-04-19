@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
+# Part 1 - Using the `css` prop
 ## Getting Started
 
-First, run the development server:
+1. Run `yarn install`
+2. Open up `pages/index.js` in your editor
+3. Run `yarn dev` and open `http://localhost:3000`
 
-```bash
-npm run dev
-# or
-yarn dev
+## Background
+
+In exercise 1, we successfully moved our CSS into our JS file. In exercise 2, we successfully migrated to using the `styled()` function to write CSS. In this exercise, we'll look at another popular way to use CSS-in-JS: the `css` prop.
+
+Let's re-refactor our code from the first exercise, but this time we'll use the `css` prop with object styles instead of `styled()`.
+
+## Challenge
+
+1. Refactor the current implementation to use the `css` prop with object styles.
+2. Re-implement the hover/focus states for the button using this approach.
+
+Here's a code example to help you get started:
+
+```javascript
+// Use emotion's jsx function instead of React's - we need this to make use of the 'css' prop.
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from "@emotion/react";
+
+// Write your CSS inline
+export default function Home() {
+  return (
+    <img
+      css={{
+        width: "50%",
+        marginBottom: 48, // numbers are auto-converted to pixel values by emotion
+      }}
+      src="https://ichef.bbci.co.uk/images/ic/raw/p0bx2qpy.png"
+    />
+  )
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Documentation on basic usage of the `css` prop with object styles can be found here: https://emotion.sh/docs/object-styles#with-the-css-prop
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Documentation on nested selectors within the `css` prop are here: https://emotion.sh/docs/object-styles#child-selectors. This approach can be used with psuedo selectors.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Questions to Ponder
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Do you prefer this method to writing CSS files?
+2. What are the limitations to this approach?
+3. How would you enforce conventions using this approach?
+4. How would you re-use styles within this approach?
+5. Can you think of any other ways for handling styling within components?

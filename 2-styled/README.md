@@ -31,7 +31,7 @@ Using the [emotion](https://emotion.sh/) library, we have multiple options for i
 
 ## Challenge
 
-1. Refactor the current implementation to use the `styled()` prop.
+1. Refactor the current implementation to use the `styled()` function.
 2. Re-implement the hover/focus states for the button using this approach.
 
 Here's a code example to help you get started:
@@ -55,10 +55,12 @@ export default function Home() {
 
 Documentation on basic usage of `styled()` can be found here: https://emotion.sh/docs/styled#styling-elements-and-components
 
-Documentation on nested selectors within `styled()` is here: https://emotion.sh/docs/styled#styling-elements-and-components. This approach can be used with psuedo selectors.
+Documentation on nested selectors within `styled()` is here: https://emotion.sh/docs/styled#nesting-components. This approach can be used with psuedo selectors.
 
 ## Questions to Ponder
 
 1. Do you prefer this method to writing CSS files?
 2. What are the limitations to this approach?
-3. Can you think of any other ways for handling styling within components?
+3. How would you enforce conventions using this approach?
+4. How would you re-use styles within this approach?
+5. Can you think of any other ways for handling styling within components?

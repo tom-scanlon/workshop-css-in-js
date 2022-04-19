@@ -1,18 +1,19 @@
-import Head from 'next/head'
-import styled from '@emotion/styled'
+import Head from "next/head";
+import styled from "@emotion/styled";
 
 const container = {
-  background: "linear-gradient(104deg, #1e0505 2%,#380400 27%,#800000 68%,#cc2c00 100%)",
+  background:
+    "linear-gradient(104deg, #1e0505 2%,#380400 27%,#800000 68%,#cc2c00 100%)",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  minHeight: "100vh"
+  minHeight: "100vh",
 };
 
 const image = {
   width: "50%",
-  marginBottom: "48px"
+  marginBottom: "48px",
 };
 
 const main = {
@@ -60,7 +61,7 @@ const aodCta = {
   fontSize: "18px",
   fontWeight: "700",
   transition: "300ms",
-}
+};
 
 export default function Home() {
   return (
@@ -71,13 +72,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main style={main}>
-        {/* <img style={image} src='https://ichef.bbci.co.uk/images/ic/raw/p0bx2qpy.png'/> */}
+        <img
+          style={image}
+          src="https://ichef.bbci.co.uk/images/ic/raw/p0bx2qpy.png"
+        />
         <Image src="https://ichef.bbci.co.uk/images/ic/raw/p0bx2qpy.png" />
         <h1 style={title}>Your world of Sounds</h1>
-        <p style={description}>Save shows to listen to later, subscribe to your favourites and get fresh recommendations every day.</p>
+        <p style={description}>
+          Save shows to listen to later, subscribe to your favourites and get
+          fresh recommendations every day.
+        </p>
         <button style={liveCta}>Listen Live</button>
         <button style={aodCta}>Play</button>
       </main>
     </div>
-  )
+  );
 }

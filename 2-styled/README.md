@@ -1,4 +1,4 @@
-# Part 1 - Using `styled()`
+# Part 2 - Using `styled()`
 ## Getting Started
 
 1. Run `yarn install`

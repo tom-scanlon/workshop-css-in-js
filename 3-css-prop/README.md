@@ -1,4 +1,4 @@
-# Part 1 - Using the `css` prop
+# Part 3 - Using the `css` prop
 ## Getting Started
 
 1. Run `yarn install`
